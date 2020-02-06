@@ -10,7 +10,7 @@ FRAMES_IN_OBSERVATION = 4
 FRAME_SIZE = 84
 INPUT_SHAPE = (FRAMES_IN_OBSERVATION, FRAME_SIZE, FRAME_SIZE)
 
-
+#this is the entire main code  
 class Atari:
 
     def __init__(self):

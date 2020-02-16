@@ -4,11 +4,7 @@
     <list default="true" id="03f9e933-b264-4ca6-a738-4278732ae84d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/atari.py" beforeDir="false" afterPath="$PROJECT_DIR$/atari.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convolutional_neural_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/convolutional_neural_network.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_models/base_game_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_models/base_game_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_models/ddqn_game_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_models/ddqn_game_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gym_wrappers.py" beforeDir="false" afterPath="$PROJECT_DIR$/gym_wrappers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/logger.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_models/ge_game_model.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -140,14 +136,18 @@
       <screen x="67" y="27" width="1853" height="948" />
     </state>
     <state x="908" y="509" width="589" height="390" key="#com.intellij.fileTypes.FileTypeChooser/67.27.1853.948@67.27.1853.948" timestamp="1581631965877" />
+    <state x="668" y="250" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581869230525">
+      <screen x="67" y="27" width="1853" height="948" />
+    </state>
+    <state x="668" y="250" width="524" height="502" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/67.27.1853.948@67.27.1853.948" timestamp="1581869230525" />
     <state x="511" y="136" key="SettingsEditor" timestamp="1581550557365">
       <screen x="67" y="27" width="1853" height="948" />
     </state>
     <state x="511" y="136" key="SettingsEditor/67.27.1853.948@67.27.1853.948" timestamp="1581550557365" />
-    <state x="692" y="501" key="com.intellij.ide.util.TipDialog" timestamp="1581631969458">
+    <state x="692" y="501" key="com.intellij.ide.util.TipDialog" timestamp="1581869988979">
       <screen x="67" y="27" width="1853" height="948" />
     </state>
-    <state x="692" y="501" key="com.intellij.ide.util.TipDialog/67.27.1853.948@67.27.1853.948" timestamp="1581631969458" />
+    <state x="692" y="501" key="com.intellij.ide.util.TipDialog/67.27.1853.948@67.27.1853.948" timestamp="1581869988979" />
   </component>
   <component name="masterDetails">
     <states>

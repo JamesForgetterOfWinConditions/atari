@@ -3,7 +3,7 @@ import argparse
 import numpy as np
 import atari_py
 from game_models.ddqn_game_model import DDQNTrainer, DDQNSolver
-from game_models.ge_game_model import GETrainer, GESolver
+
 from gym_wrappers import MainGymWrapper
 
 FRAMES_IN_OBSERVATION = 4
@@ -21,8 +21,8 @@ class Atari:
         self._main_loop(self._game_model(game_mode, game_name, env.action_space.n), env, render, total_step_limit, total_run_limit, clip)
 
     def _main_loop(self, game_model, env, render, total_step_limit, total_run_limit, clip):
-        if isinstance(game_model, GETrainer):
-            game_model.genetic_evolution(env)
+        #if isinstance(game_model, GETrainer):
+        #    game_model.genetic_evolution(env)
 
         run = 0
         total_step = 0
@@ -59,12 +59,14 @@ class Atari:
                     game_model.save_run(score, step, run)
                     break
 
+#Sets up the input from the command line into the initiation for modes and such.
+
     def _args(self):
         parser = argparse.ArgumentParser()
         available_games = list((''.join(x.capitalize() or '_' for x in word.split('_')) for word in atari_py.list_games()))
-        parser.add_argument("-g", "--game", help="Choose from available games: " + str(available_games) + ". Default is 'breakout'.", default="Breakout")
+        parser.add_argument("-g", "--game", help="Choose from available games: " + str(available_games) + ". Default is 'Space Invaders'.", default="SpaceInvaders")
         parser.add_argument("-m", "--mode", help="Choose from available modes: ddqn_train, ddqn_test, ge_train, ge_test. Default is 'ddqn_training'.", default="ddqn_training")
-        parser.add_argument("-r", "--render", help="Choose if the game should be rendered. Default is 'False'.", default=False, type=bool)
+        parser.add_argument("-r", "--render", help="Choose if the game should be rendered. Default is 'True'.", default=True, type=bool)
         parser.add_argument("-tsl", "--total_step_limit", help="Choose how many total steps (frames visible by agent) should be performed. Default is '5000000'.", default=5000000, type=int)
         parser.add_argument("-trl", "--total_run_limit", help="Choose after how many runs we should stop. Default is None (no limit).", default=None, type=int)
         parser.add_argument("-c", "--clip", help="Choose whether we should clip rewards to (0, 1) range. Default is 'True'", default=True, type=bool)
@@ -88,10 +90,11 @@ class Atari:
             return DDQNTrainer(game_name, INPUT_SHAPE, action_space)
         elif game_mode == "ddqn_testing":
             return DDQNSolver(game_name, INPUT_SHAPE, action_space)
-        elif game_mode == "ge_training":
-            return GETrainer(game_name, INPUT_SHAPE, action_space)
-        elif game_mode == "ge_testing":
-            return GESolver(game_name, INPUT_SHAPE, action_space)
+#These lines were used to select genetic evolution
+#        elif game_mode == "ge_training":
+#            return GETrainer(game_name, INPUT_SHAPE, action_space)
+#        elif game_mode == "ge_testing":
+#            return GESolver(game_name, INPUT_SHAPE, action_space)
         else:
             print "Unrecognized mode. Use --help"
             exit(1)

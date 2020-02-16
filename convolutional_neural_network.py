@@ -3,6 +3,12 @@ from keras.models import Sequential
 from keras.layers import Conv2D, Flatten, Dense
 
 
+#this right here is the brains of the machine.
+#Sets up the multiple layers and input and output
+#Will need to come back and tweak for improving specific performance on Space Invaders.
+
+
+
 class ConvolutionalNeuralNetwork:
 
     def __init__(self, input_shape, action_space):

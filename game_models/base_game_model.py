@@ -1,7 +1,7 @@
 import datetime
 from logger import Logger
 
-
+#This sets up the base game for later manipulation
 class BaseGameModel:
 
     def __init__(self, game_name, mode_name, logger_path, input_shape, action_space):

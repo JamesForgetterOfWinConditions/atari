@@ -10,7 +10,8 @@ FRAMES_IN_OBSERVATION = 4
 FRAME_SIZE = 84
 INPUT_SHAPE = (FRAMES_IN_OBSERVATION, FRAME_SIZE, FRAME_SIZE)
 
-#this is the entire main code  
+#this class starts the program running and enables options for the game, mode, and grading scale.
+#NEED TO VISIT AND REMOVE REDUNDANT, NOT USED PARTS FOR NON SPACE INVADERS DEEP Q LEARNING
 class Atari:
 
     def __init__(self):

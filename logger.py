@@ -11,6 +11,8 @@ TRAINING_UPDATE_FREQUENCY = 1000
 RUN_UPDATE_FREQUENCY = 10
 MAX_LOSS = 5
 
+#sets up the logging and scoring of the machine.  Lets it look at the past for future improvement
+
 
 class Logger:
 

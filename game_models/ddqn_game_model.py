@@ -20,6 +20,7 @@ EXPLORATION_TEST = 0.02
 EXPLORATION_STEPS = 850000
 EXPLORATION_DECAY = (EXPLORATION_MAX-EXPLORATION_MIN)/EXPLORATION_STEPS
 
+#this sets up the game for the DDQN model using a convolutional Neural Network
 
 class DDQNGameModel(BaseGameModel):
 

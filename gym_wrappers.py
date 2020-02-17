@@ -7,7 +7,7 @@ from collections import deque
 import gym
 from gym import spaces
 import cv2
-
+import sys
 
 #Basically, this lets us put in the frames from the game, and process it for the program to train off of.
 
@@ -112,6 +112,34 @@ class ProcessFrame84(gym.ObservationWrapper):
             img = np.reshape(frame, [250, 160, 3]).astype(np.float32)
         else:
             assert False, "Unknown resolution."
+        if True:
+            void_color = np.array([181, 83, 40])
+            for line in range(157, 175):
+                np.delete(img, line, 0)
+        if False:
+            colorValues = {}
+            actualValue = {}
+            counter = 0
+            for (line_num, line) in enumerate(img):
+                sys.stdout.write("{:03d}".format(line_num))
+                for pixel in line:
+                    meanPixel = np.mean(pixel)
+                    if (int(meanPixel/25)) == 0:
+                        char = " "
+                    else:
+                        if meanPixel not in colorValues.keys():
+                            counter += 1
+                            actualValue[counter] = pixel
+                            colorValues[meanPixel] = counter
+                        char = str(colorValues[meanPixel])
+                            
+                    sys.stdout.write(char)
+                sys.stdout.write('\n')
+            for key in actualValue.keys():
+                print(key),
+                print(" = "),
+                print(actualValue[key])
+#        print(img)
         img = img[:, :, 0] * 0.299 + img[:, :, 1] * 0.587 + img[:, :, 2] * 0.114
         resized_screen = cv2.resize(img, (84, 110), interpolation=cv2.INTER_AREA)
         x_t = resized_screen[18:102, :]

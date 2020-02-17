@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="03f9e933-b264-4ca6-a738-4278732ae84d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/atari.py" beforeDir="false" afterPath="$PROJECT_DIR$/atari.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_models/ge_game_model.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/convolutional_neural_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/convolutional_neural_network.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/game_models/ddqn_game_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_models/ddqn_game_model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/logger.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,31 +21,6 @@
         <option value="Python Script" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>NO</find>
-      <find>action_space</find>
-      <find>load_path</find>
-      <find>randin</find>
-      <find>randrange</find>
-      <find>learning_rate</find>
-      <find>get_max_q</find>
-      <find>get_random_stateget_random_state</find>
-      <find>experiences</find>
-      <find>gathe</find>
-      <find>self.actions</find>
-      <find>minib</find>
-      <find>_save_memory</find>
-      <find>training_co</find>
-      <find>losses</find>
-      <find>dqn_target</find>
-      <find>LazyFrames</find>
-      <find>rand</find>
-      <find>obser</find>
-      <find>env</find>
-      <find>run</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />

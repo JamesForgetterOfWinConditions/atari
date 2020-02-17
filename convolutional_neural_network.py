@@ -41,5 +41,6 @@ class ConvolutionalNeuralNetwork:
                            optimizer=RMSprop(lr=0.00025,
                                              rho=0.95,
                                              epsilon=0.01),
+#Changed metrics=["accuracy"] to metrics=["acc"] to match call in ddqn_game_model.py on line 145
                            metrics=["accuracy"])
         self.model.summary()

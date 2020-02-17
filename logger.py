@@ -40,6 +40,7 @@ class Logger:
 
     def add_accuracy(self, accuracy):
         self.accuracy.add_entry(accuracy)
+        #print('{{Accuracy is set to: {}}}'.format(accuracy))
 
     def add_loss(self, loss):
         loss = min(MAX_LOSS, loss)  # Loss clipping for very big values that are likely to happen in the early stages of learning
@@ -60,9 +61,12 @@ class Stat:
         self.values = []
 
     def add_entry(self, value):
+        #print(type(value))
         self.values.append(value)
         if len(self.values) % self.update_frequency == 0:
-            mean_value = mean(self.values)
+            #print(self.values)
+            mean_value = np.mean(self.values)
+
             print self.y_label + ": (min: " + str(min(self.values)) + ", avg: " + str(mean_value) + ", max: " + str(max(self.values))
             print '{"metric": "' + self.y_label + '", "value": {}}}'.format(mean_value)
             self._save_csv(self.directory_path + self.y_label + ".csv", mean_value)

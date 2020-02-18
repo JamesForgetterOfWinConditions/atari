@@ -106,34 +106,49 @@ class ProcessFrame84(gym.ObservationWrapper):
 
     @staticmethod
     def process(frame):
+        #ADD shields as a parser arg
         if frame.size == 210 * 160 * 3:
             img = np.reshape(frame, [210, 160, 3]).astype(np.float32)
         elif frame.size == 250 * 160 * 3:
             img = np.reshape(frame, [250, 160, 3]).astype(np.float32)
         else:
             assert False, "Unknown resolution."
-        if True:
-            void_color = np.array([181, 83, 40])
+       #shuts off the shields from view
+        shields = False
+        if shields:
+           # void_color = np.array([181, 83, 40])
             for line in range(157, 175):
-                np.delete(img, line, 0)
+                for pixel in range(41, 52):
+                    for barrier in range(3):
+                        position = pixel + (barrier*32)
+                        img[line, pixel] = ([0, 0, 0,])
+                #Now fills the whole row with 0s
+                #img[line].fill(0)
+                #previously just deleted.  May have messed up calculations of dodging.
+                #np.delete(img, line, 0)
         if False:
             colorValues = {}
             actualValue = {}
             counter = 0
             for (line_num, line) in enumerate(img):
                 sys.stdout.write("{:03d}".format(line_num))
-                for pixel in line:
+                
+                for (pixel_num, pixel) in enumerate(line):
                     meanPixel = np.mean(pixel)
-                    if (int(meanPixel/25)) == 0:
-                        char = " "
-                    else:
-                        if meanPixel not in colorValues.keys():
-                            counter += 1
-                            actualValue[counter] = pixel
-                            colorValues[meanPixel] = counter
-                        char = str(colorValues[meanPixel])
+                    if pixel_num % 2 == 0:  
+                        if (int(meanPixel/25)) == 0:
+                            char = " "
+                        else:
+                            if meanPixel not in colorValues.keys():
+                                counter += 1
+                                actualValue[counter] = pixel
+                                colorValues[meanPixel] = counter
+                            char = str(colorValues[meanPixel])
                             
-                    sys.stdout.write(char)
+                  
+                        sys.stdout.write(char)
+                    else:
+                        sys.stdout.write("{:03d}".format(pixel_num))
                 sys.stdout.write('\n')
             for key in actualValue.keys():
                 print(key),

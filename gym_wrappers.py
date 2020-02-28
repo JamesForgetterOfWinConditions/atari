@@ -10,7 +10,7 @@ import cv2
 import sys
 
 #Basically, this lets us put in the frames from the game, and process it for the program to train off of.
-
+shields = False
 
 class NoopResetEnv(gym.Wrapper):
     def __init__(self, env=None, noop_max=30):
@@ -100,7 +100,7 @@ class ProcessFrame84(gym.ObservationWrapper):
     def __init__(self, env=None):
         super(ProcessFrame84, self).__init__(env)
         self.observation_space = spaces.Box(low=0, high=255, shape=(84, 84, 1))
-
+        print(shields)
     def observation(self, obs):
         return ProcessFrame84.process(obs)
 
@@ -114,7 +114,6 @@ class ProcessFrame84(gym.ObservationWrapper):
         else:
             assert False, "Unknown resolution."
        #shuts off the shields from view
-        shields = False
         if shields:
            # void_color = np.array([181, 83, 40])
             for line in range(157, 175):
@@ -239,3 +238,6 @@ class MainGymWrapper():
         env = FrameStack(env, 4)
         # env = ClippedRewardsWrapper(env)
         return env
+
+    def set_shields(shields):
+        self.shields = shields

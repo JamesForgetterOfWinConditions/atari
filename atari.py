@@ -5,6 +5,7 @@ import atari_py
 from game_models.ddqn_game_model import DDQNTrainer, DDQNSolver
 
 from gym_wrappers import MainGymWrapper
+import gym_wrappers
 
 FRAMES_IN_OBSERVATION = 4
 FRAME_SIZE = 84
@@ -15,9 +16,12 @@ INPUT_SHAPE = (FRAMES_IN_OBSERVATION, FRAME_SIZE, FRAME_SIZE)
 class Atari:
 
     def __init__(self):
-        game_name, game_mode, render, total_step_limit, total_run_limit, clip = self._args()
+        
+        game_name, game_mode, render, total_step_limit, total_run_limit, clip, shields = self._args()
+        print(shields)
         env_name = game_name + "Deterministic-v4"  # Handles frame skipping (4) at every iteration
         env = MainGymWrapper.wrap(gym.make(env_name))
+        #env.set_shields(shields)
         self._main_loop(self._game_model(game_mode, game_name, env.action_space.n), env, render, total_step_limit, total_run_limit, clip)
 
     def _main_loop(self, game_model, env, render, total_step_limit, total_run_limit, clip):
@@ -70,6 +74,7 @@ class Atari:
         parser.add_argument("-tsl", "--total_step_limit", help="Choose how many total steps (frames visible by agent) should be performed. Default is '5000000'.", default=5000000, type=int)
         parser.add_argument("-trl", "--total_run_limit", help="Choose after how many runs we should stop. Default is None (no limit).", default=None, type=int)
         parser.add_argument("-c", "--clip", help="Choose whether we should clip rewards to (0, 1) range. Default is 'True'", default=True, type=bool)
+        parser.add_argument("-s", "--shields", help="Choose whether we should let the machine see the shields. Default is 'False'", default=False, type=bool)
         args = parser.parse_args()
         game_mode = args.mode
         game_name = args.game
@@ -77,13 +82,16 @@ class Atari:
         total_step_limit = args.total_step_limit
         total_run_limit = args.total_run_limit
         clip = args.clip
+        shields=args.shields
+        gym_wrappers.shields = shields
         print "Selected game: " + str(game_name)
         print "Selected mode: " + str(game_mode)
         print "Should render: " + str(render)
         print "Should clip: " + str(clip)
         print "Total step limit: " + str(total_step_limit)
         print "Total run limit: " + str(total_run_limit)
-        return game_name, game_mode, render, total_step_limit, total_run_limit, clip
+        print "Shields are visible: "  + str(shields)
+        return game_name, game_mode, render, total_step_limit, total_run_limit, clip, shields
 
     def _game_model(self, game_mode,game_name, action_space):
         if game_mode == "ddqn_training":

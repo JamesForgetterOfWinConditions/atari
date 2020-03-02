@@ -8,9 +8,10 @@ Research Playground built on top of [OpenAI's Atari Gym](https://gym.openai.com/
 ## Purpose
 This project is aimed to see how making small tweaks to the program can increase performance in Space Invaders.  This highlights the No Free Lunch Theorum that no one program can do every task.
 
-##Large Changes
+## Large Changes
 I made a couple of large changes to this project.  These include removing the Genetic Evolution sections, changing references of 'acc' to 'accuracy', and adding the option to block out the shields from the machine's view.  I cut the Genetic Evolution parts to reduce unused sections.  I changed the references of 'acc' because it would not work otherwise.  I added the ability to block out shields so that I could compare how the machine did with a different view.
 A side note, I had to go into tensorflow and change a line that was calling a deprecated global variable function.  It was a pretty easy fix, but it was hard to find.
+
 ## Usage
 
 1. Clone the repository.
@@ -18,8 +19,8 @@ A side note, I had to go into tensorflow and change a line that was calling a de
 3. Install required packages`pip install -r requirements.txt`.
 4. Launch atari. I recommend starting with help command to see all available modes `python atari.py --help`.
 
-##Human Comparison
-To see what this game is like to play for the machine I included an atari emulator called [Stella](https://stella-emu.github.io/).
+## Human Comparison
+To see what this game is like to play for the machine I downloaded an atari emulator called [Stella](https://stella-emu.github.io/).
 
 ## DDQN
 ### Hyperparameters

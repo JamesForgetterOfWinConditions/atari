@@ -57,6 +57,7 @@ Deep Convolutional Neural Network by [DeepMind](https://www.cs.toronto.edu/~vmni
 
 ---
 
-###Sources
+### Sources
 Make sure to check out these sources which can explain these better than I can.
 https://towardsdatascience.com/atari-reinforcement-learning-in-depth-part-1-ddqn-ceaa762a546f
+https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf

@@ -3,41 +3,23 @@
 </h3>
 
 # Atari
-
+This is an Space Invaders playing Machine Learning program.  Based off of a framework from wonderful programmer [Greg Surma](https://gsurma.github.io).
 Research Playground built on top of [OpenAI's Atari Gym](https://gym.openai.com/envs/#atari), prepared for implementing various Reinforcement Learning algorithms.
-
-It can emulate any of the following games:
-	
-> ['Asterix', 'Asteroids',
-> 'MsPacman', 'Kaboom', 'BankHeist', 'Kangaroo',
-> 'Skiing', 'FishingDerby', 'Krull', 'Berzerk',
-> 'Tutankham', 'Zaxxon', 'Venture', 'Riverraid',
-> 'Centipede', 'Adventure', 'BeamRider', 'CrazyClimber',
-> 'TimePilot', 'Carnival', 'Tennis', 'Seaquest',
-> 'Bowling', 'SpaceInvaders', 'Freeway', 'YarsRevenge',
-> 'RoadRunner', 'JourneyEscape', 'WizardOfWor',
-> 'Gopher', 'Breakout', 'StarGunner', 'Atlantis',
-> 'DoubleDunk', 'Hero', 'BattleZone', 'Solaris',
-> 'UpNDown', 'Frostbite', 'KungFuMaster', 'Pooyan',
-> 'Pitfall', 'MontezumaRevenge', 'PrivateEye',
-> 'AirRaid', 'Amidar', 'Robotank', 'DemonAttack',
-> 'Defender', 'NameThisGame', 'Phoenix', 'Gravitar',
-> 'ElevatorAction', 'Pong', 'VideoPinball', 'IceHockey',
-> 'Boxing', 'Assault', 'Alien', 'Qbert', 'Enduro',
-> 'ChopperCommand', 'Jamesbond']
-
-Check out corresponding Medium article: [Atari - Reinforcement Learning in depth 🤖 (Part 1: DDQN)](https://towardsdatascience.com/atari-reinforcement-learning-in-depth-part-1-ddqn-ceaa762a546f)
-
 ## Purpose
-The ultimate goal of this project is to implement and compare various RL approaches with atari games as a common denominator.
+This project is aimed to see how making small tweaks to the program can increase performance in Space Invaders.  This highlights the No Free Lunch Theorum that no one program can do every task.
 
+##Large Changes
+I made a couple of large changes to this project.  These include removing the Genetic Evolution sections, changing references of 'acc' to 'accuracy', and adding the option to block out the shields from the machine's view.  I cut the Genetic Evolution parts to reduce unused sections.  I changed the references of 'acc' because it would not work otherwise.  I added the ability to block out shields so that I could compare how the machine did with a different view.
+A side note, I had to go into tensorflow and change a line that was calling a deprecated global variable function.  It was a pretty easy fix, but it was hard to find.
 ## Usage
 
-1. Clone the repo.
+1. Clone the repository.
 2. Go to the project's root folder.
 3. Install required packages`pip install -r requirements.txt`.
 4. Launch atari. I recommend starting with help command to see all available modes `python atari.py --help`.
 
+##Human Comparison
+To see what this game is like to play for the machine I included an atari emulator called [Stella](https://stella-emu.github.io/).
 
 ## DDQN
 ### Hyperparameters
@@ -71,81 +53,9 @@ Deep Convolutional Neural Network by [DeepMind](https://www.cs.toronto.edu/~vmni
 
 
 ### Performance
-After 5M of steps (**~40h** on Tesla K80 GPU or **~90h** on 2.9 GHz Intel i7 Quad-Core CPU):
-
-#### SpaceInvaders
-
-*Training:*
-
-<img src="assets/SpaceInvaders/ddqn/training_loss.png" width="500">
-<img src="assets/SpaceInvaders/ddqn/training_score.png" width="500">
-
-Normalized score - each reward clipped to (-1, 1)
-
-*Testing:*
-
-<img src="assets/SpaceInvaders/ddqn/space_invaders.gif" width="440">
-
-<img src="assets/SpaceInvaders/ddqn/score.png" width="500">
-
-Human average: **~372**
-
-DDQN average: **~479 (128%)**
 
 ---
 
-#### Breakout
-
-*Training:*
-
-<img src="assets/Breakout/ddqn/training_loss.png" width="500">
-<img src="assets/Breakout/ddqn/training_score.png" width="500">
-
-Normalized score - each reward clipped to (-1, 1)
-
-*Testing:*
-
-<img src="assets/Breakout/ddqn/breakout.gif" width="440">
-<img src="assets/Breakout/ddqn/score.png" width="500">
-
-Human average: **~28**
-
-DDQN average: **~62 (221%)**
-
-
-
-## Genetic Evolution
-
-
-#### Atlantis
-
-*Training:*
-
-<img src="assets/Atlantis/ge/score.png" width="500">
-
-Normalized score - each reward clipped to (-1, 1)
-
-*Testing:*
-
-<img src="assets/Atlantis/ge/atlantis.gif" width="440">
-<img src="assets/Atlantis/ge/testing_score.png" width="500">
-
-
-Human average: **~29,000**
-
-GE average: **31,000 (106%)**
-
-## Author
-
-**Greg (Grzegorz) Surma**
-
-[**PORTFOLIO**](https://gsurma.github.io)
-
-[**GITHUB**](https://github.com/gsurma)
-
-[**BLOG**](https://medium.com/@gsurma)
-
-<a href="https://www.paypal.com/paypalme2/grzegorzsurma115">
-  <img alt="Support via PayPal" src="https://cdn.rawgit.com/twolfson/paypal-github-button/1.0.0/dist/button.svg"/>
-</a>
-
+###Sources
+Make sure to check out these sources which can explain these better than I can.
+https://towardsdatascience.com/atari-reinforcement-learning-in-depth-part-1-ddqn-ceaa762a546f

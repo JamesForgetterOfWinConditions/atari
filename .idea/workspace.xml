@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="03f9e933-b264-4ca6-a738-4278732ae84d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/convolutional_neural_network.py" beforeDir="false" afterPath="$PROJECT_DIR$/convolutional_neural_network.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/game_models/ddqn_game_model.py" beforeDir="false" afterPath="$PROJECT_DIR$/game_models/ddqn_game_model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logger.py" beforeDir="false" afterPath="$PROJECT_DIR$/logger.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,9 +42,15 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="atari" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -120,9 +123,10 @@
       <screen x="67" y="27" width="1853" height="948" />
     </state>
     <state x="511" y="136" key="SettingsEditor/67.27.1853.948@67.27.1853.948" timestamp="1581550557365" />
-    <state x="692" y="501" key="com.intellij.ide.util.TipDialog" timestamp="1581869988979">
-      <screen x="67" y="27" width="1853" height="948" />
+    <state x="648" y="501" key="com.intellij.ide.util.TipDialog" timestamp="1583188835583">
+      <screen x="0" y="27" width="1920" height="948" />
     </state>
+    <state x="648" y="501" key="com.intellij.ide.util.TipDialog/0.27.1920.948@0.27.1920.948" timestamp="1583188835583" />
     <state x="692" y="501" key="com.intellij.ide.util.TipDialog/67.27.1853.948@67.27.1853.948" timestamp="1581869988979" />
   </component>
   <component name="masterDetails">

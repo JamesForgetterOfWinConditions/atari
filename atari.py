@@ -39,6 +39,7 @@ class Atari:
             current_state = env.reset()
             step = 0
             score = 0
+
             while True:
                 if total_step >= total_step_limit:
                     print "Reached total step limit of: " + str(total_step_limit)

@@ -56,8 +56,12 @@ Deep Convolutional Neural Network by [DeepMind](https://www.cs.toronto.edu/~vmni
 ### Performance
 
 ---
-
+In order to test the performance of my model, I ran twenty runs, ten with shields and ten without.  These each increased the run limit by ten, going up to 100.
+<img src="assets/Performance/Score During Training.png" width="500">
+My main takeaway from this was that my machine did not have the capacity to fully run this model.  A longer training on a better processor would be enlightening.  
 ### Sources
-Make sure to check out these sources which can explain these better than I can.
-https://towardsdatascience.com/atari-reinforcement-learning-in-depth-part-1-ddqn-ceaa762a546f
+Make sure to check out these sources which can explain these better than I can.  
+
+https://towardsdatascience.com/atari-reinforcement-learning-in-depth-part-1-ddqn-ceaa762a546f  
+
 https://www.cs.toronto.edu/~vmnih/docs/dqn.pdf

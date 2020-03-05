@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="03f9e933-b264-4ca6-a738-4278732ae84d" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/atari.py" beforeDir="false" afterPath="$PROJECT_DIR$/atari.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,10 +125,14 @@
       <screen x="67" y="27" width="1853" height="948" />
     </state>
     <state x="511" y="136" key="SettingsEditor/67.27.1853.948@67.27.1853.948" timestamp="1581550557365" />
-    <state x="648" y="501" key="com.intellij.ide.util.TipDialog" timestamp="1583188835583">
+    <state x="146" y="127" width="1674" height="748" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1583282203905">
       <screen x="0" y="27" width="1920" height="948" />
     </state>
-    <state x="648" y="501" key="com.intellij.ide.util.TipDialog/0.27.1920.948@0.27.1920.948" timestamp="1583188835583" />
+    <state x="146" y="127" width="1674" height="748" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.27.1920.948@0.27.1920.948" timestamp="1583282203905" />
+    <state x="648" y="501" key="com.intellij.ide.util.TipDialog" timestamp="1583327322418">
+      <screen x="0" y="27" width="1920" height="948" />
+    </state>
+    <state x="648" y="501" key="com.intellij.ide.util.TipDialog/0.27.1920.948@0.27.1920.948" timestamp="1583327322418" />
     <state x="692" y="501" key="com.intellij.ide.util.TipDialog/67.27.1853.948@67.27.1853.948" timestamp="1581869988979" />
   </component>
   <component name="masterDetails">
